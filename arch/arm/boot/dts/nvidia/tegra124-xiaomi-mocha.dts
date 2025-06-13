@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-2.0
+#include <dt-bindings/input/input.h>
+#include "tegra124.dtsi"
+#include "tegra124-xiaomi-mocha-emc.dtsi"
+ 
+/ {
+    model = "Xiaomi Mi Pad A0101";
+    compatible = "xiaomi,mocha", "nvidia,tegra124";
+
+    memory {
+		device_type = "memory";
+		reg = <0x80000000 0x80000000>;
+	};
+
+    chosen {
+		stdout-path = &uartd;
+	};
+
+    uartd: serial@70006300 {
+		status = "okay";
+	};
+}
