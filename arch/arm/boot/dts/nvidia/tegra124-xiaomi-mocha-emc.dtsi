@@ -1,7 +1,9 @@
 /*
  * arch/arm/boot/dts/tegra124-mocha-emc.dtsi
  *
- * Copyright (c) 2018, Dmitry Alexandrov.  All rights reserved.
+ * Copyright (c) 2018, Dmitry Alexandrov,
+ * (c) 2025, Christine Gu. 
+ * All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +20,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
  
+ #include <dt-bindings/clock/tegra124-car.h>
+
 / {
 	clock@60006000 {
 		emc-timings-3 {
