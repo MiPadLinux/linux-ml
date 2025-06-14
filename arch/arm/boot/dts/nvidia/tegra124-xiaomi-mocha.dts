@@ -9,13 +9,36 @@
     model = "Xiaomi Mi Pad A0101";
     compatible = "xiaomi,mocha", "nvidia,tegra124";
 
-    memory {
-		device_type = "memory";
-		reg = <0x80000000 0x80000000>;
+	aliases {
+		rtc0 = "/i2c@7000d000/pmic@58";
+		rtc1 = "/rtc@7000e000";
 	};
 
-    chosen {
+	chosen {
 		stdout-path = &uartd;
+	};
+
+	memory {
+		reg = <0x0 0x80000000 0x0 0x80000000>;
+	};
+
+	cpus {
+		cpu@0 {
+			vdd-cpu-supply = <&vdd_cpu>;
+			enable-method = "psci";
+		};
+
+		cpu@1 {
+			enable-method = "psci";
+		};
+
+		cpu@2 {
+			enable-method = "psci";
+		};
+
+		cpu@3 {
+			enable-method = "psci";
+		};
 	};
 
     uartd: serial@70006300 {
