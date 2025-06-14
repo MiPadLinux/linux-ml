@@ -18,10 +18,6 @@
 		stdout-path = &uartd;
 	};
 
-	memory {
-		reg = <0x0 0x80000000 0x0 0x80000000>;
-	};
-
 	cpus {
 		cpu@0 {
 			vdd-cpu-supply = <&vdd_cpu>;
@@ -39,6 +35,40 @@
 		cpu@3 {
 			enable-method = "psci";
 		};
+	};
+
+	memory {
+		reg = <0x0 0x80000000 0x0 0x80000000>;
+	};
+
+	i2c@7000d000 {
+		clock-frequency = <400000>;
+		status = "okay";
+	};
+
+	i2c@7000d100 {
+		status = "okay";
+		clock-frequency = <400000>;
+	};
+
+	i2c@7000c000 {
+		status = "okay";
+		clock-frequency = <400000>;
+	};
+
+	i2c@7000c400 {
+		status = "okay";
+		clock-frequency = <400000>;
+	};
+
+	i2c@7000c500 {
+		status = "okay";
+		clock-frequency = <400000>;
+	};
+
+	i2c@7000c700 {
+		status = "okay";
+		clock-frequency = <400000>;
 	};
 
     uartd: serial@70006300 {
