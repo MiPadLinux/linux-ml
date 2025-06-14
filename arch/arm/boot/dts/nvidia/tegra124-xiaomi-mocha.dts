@@ -19,4 +19,4 @@
     uartd: serial@70006300 {
 		status = "okay";
 	};
-}
+};
