@@ -135,7 +135,7 @@
 
 			pmic {
 				compatible = "ti,tps65913-pmic", "ti,palmas-pmic";
-				ldo1-in-supply = <&palmas_smps8>;
+				ldo1-in-supply = <&palmas_smps6>;
 				ldo2-in-supply = <&palmas_smps6>;
 				ldo3-in-supply = <&palmas_smps10_out2>;
 				ldo5-in-supply = <&palmas_smps8>;
@@ -162,7 +162,7 @@
 						regulator-boot-on;
 					};
 
-					palmas_smps6: smps6 {
+					vdd_ddr: smps6 {
 						regulator-name = "vddio-ddr";
 						regulator-always-on;
 						regulator-boot-on;
@@ -170,7 +170,7 @@
 						regulator-max-microvolt = <1200000>;
 					};
 
-					smps7 {
+					vdd_soc: smps7 {
 						regulator-name = "vdd-core";
 						regulator-min-microvolt = <700000>;
 						regulator-max-microvolt = <1400000>;
