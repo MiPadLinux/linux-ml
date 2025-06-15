@@ -12,6 +12,9 @@
 	aliases {
 		rtc0 = "/i2c@7000d000/pmic@58";
 		rtc1 = "/rtc@7000e000";
+		sdhci0 = &sdmmc1;
+		sdhci2 = &sdmmc3;
+		sdhci3 = &sdmmc4;
 	};
 
 	bat: battery {
@@ -23,9 +26,6 @@
 
 	chosen {
 		stdout-path = &uartd;
-		sdhci0 = &sdmmc1;
-		sdhci2 = &sdmmc3;
-		sdhci3 = &sdmmc4;
 	};
 
 	cpus {
@@ -135,7 +135,7 @@
 
 			pmic {
 				compatible = "ti,tps65913-pmic", "ti,palmas-pmic";
-				ldo1-in-supply = <&palmas_smps6>;
+				ldo1-in-supply = <&palmas_smps8>;
 				ldo2-in-supply = <&palmas_smps6>;
 				ldo3-in-supply = <&palmas_smps10_out2>;
 				ldo5-in-supply = <&palmas_smps8>;
