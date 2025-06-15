@@ -23,6 +23,9 @@
 
 	chosen {
 		stdout-path = &uartd;
+		sdhci0 = &sdmmc1;
+		sdhci2 = &sdmmc3;
+		sdhci3 = &sdmmc4;
 	};
 
 	cpus {
@@ -327,6 +330,34 @@
 	i2c@7000c700 {
 		status = "okay";
 		clock-frequency = <400000>;
+	};
+
+	sdmmc4: mmc@700b0600 {
+		vmmc-supply = <&palmas_smps8>;
+		bus_width = <8>;
+		non-removable;
+		max-frequency = <51000000>;
+		status = "okay";
+ 	};
+	
+	/* SDcard */
+	sdmmc3: mmc@700b0400 {
+		sd-uhs-ddr50;
+		mmc-ddr-3_3v;
+		max-frequency = <41000000>;
+ 		power-gpios = <&gpio TEGRA_GPIO(R, 0) 0>;
+ 		cd-gpios = <&gpio TEGRA_GPIO(V, 2) 0>;
+ 		vmmc-supply = <&palmas_ldo9>;
+		vqmmc-supply = <&palmas_smps9>;
+		status = "okay";
+	};
+	
+	/* Wi-Fi */
+	sdmmc1: mmc@700b0000 {
+		non-removable;
+		power-gpios = <&gpio TEGRA_GPIO(X, 7) 0>;
+		vqmmc-supply = <&palmas_smps8>;
+ 		status = "okay";
 	};
 
 	pinmux: pinmux@70000868 {
