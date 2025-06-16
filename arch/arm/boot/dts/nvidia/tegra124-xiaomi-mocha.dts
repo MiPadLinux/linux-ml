@@ -32,7 +32,6 @@
 
 	clk32k_in: clock-32k {
 		compatible = "fixed-clock";
-		reg = <0>;
 		#clock-cells = <0>;
 		clock-frequency = <32768>;
 	};
@@ -1403,7 +1402,6 @@
 
 	usb2_vbus: regulator-vbus2 {
 		compatible = "regulator-fixed";
-		reg = <3>;
 		regulator-name = "usb2-vbus";
 		regulator-min-microvolt = <5000000>;
 		regulator-max-microvolt = <5000000>;
@@ -1415,7 +1413,6 @@
 
 	avdd_lcd: regulator-avddlcd {
 		compatible = "regulator-fixed";
-		reg = <4>;
 		regulator-name = "avdd-lcd-vsp";
 		regulator-min-microvolt = <5500000>;
 		regulator-max-microvolt = <5500000>;
