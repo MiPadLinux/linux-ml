@@ -135,8 +135,8 @@
 
 			pmic {
 				compatible = "ti,tps65913-pmic", "ti,palmas-pmic";
-				ldo1-in-supply = <&palmas_smps6>;
-				ldo2-in-supply = <&palmas_smps6>;
+				ldo1-in-supply = <&vdd_ddr>;
+				ldo2-in-supply = <&vdd_ddr>;
 				ldo3-in-supply = <&palmas_smps10_out2>;
 				ldo5-in-supply = <&palmas_smps8>;
 				ldo6-in-supply = <&palmas_smps9>;
