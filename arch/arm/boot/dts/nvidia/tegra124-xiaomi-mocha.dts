@@ -24,6 +24,19 @@
 		charge-full-design-microamp-hours = <6520000>;
 	};
 
+	clock@70110000 {
+		status = "okay";
+		vdd-cpu-supply = <&vdd_cpu>;
+		nvidia,i2c-fs-rate = <400000>;
+	};
+
+	clk32k_in: clock-32k {
+		compatible = "fixed-clock";
+		reg = <0>;
+		#clock-cells = <0>;
+		clock-frequency = <32768>;
+	};
+	
 	chosen {
 		stdout-path = &uartd;
 	};
