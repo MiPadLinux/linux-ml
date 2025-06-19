@@ -69,6 +69,44 @@
 		reg = <0x0 0x80000000 0x0 0x80000000>;
 	};
 
+	host1x@50000000 {
+		dsia: dsi@54300000 {
+			status = "okay";
+
+			avdd-dsi-csi-supply = <&avdd_dsi_csi>;
+			nvidia,ganged-mode = <&dsib>;
+
+			panel_primary: panel@0 {
+				compatible = "sharp,lq079l1sx01";
+				reg = <0>;
+
+				link2 = <&panel_secondary>;
+
+				avdd-supply = <&avdd_lcd>;
+				vddio-supply = <&vdd_lcd_io>;
+
+				vsp-supply = <&vsp_5v5_lcd>;
+				vsn-supply = <&vsn_5v5_lcd>;
+
+				reset-gpios = <&gpio TEGRA_GPIO(H, 3) GPIO_ACTIVE_LOW>;
+
+				backlight = <&lp8556>;
+			};
+		};
+
+		dsib: dsi@54400000 {
+			status = "okay";
+
+			avdd-dsi-csi-supply = <&avdd_dsi_csi>;
+
+			panel_secondary: panel@0 {
+				compatible = "sharp,lq079l1sx01";
+				reg = <0>;
+			};
+		};
+	};
+
+
 	i2c@7000d000 {
 		clock-frequency = <400000>;
 		status = "okay";
@@ -254,7 +292,7 @@
 						regulator-max-microvolt = <2700000>;
 					};
 
-					ldo5_reg: ldo5 {
+					avdd_dsi_csi: ldo5 {
 						regulator-name = "avdd-dsi-csi";
 						regulator-min-microvolt = <1200000>;
 						regulator-max-microvolt = <1200000>;
@@ -1480,7 +1518,7 @@
 		vin-supply = <&palmas_smps10_out2>;
 	};
 
-	vsp_5v5_lcd: regulator-vsplcd {
+	avdd_lcd: regulator-avddlcd {
 		compatible = "regulator-fixed";
 		regulator-name = "avdd-lcd-vsp";
 		regulator-min-microvolt = <5500000>;
@@ -1491,7 +1529,7 @@
 		enable-active-high;
 	};
 
-	vsn_5v5_lcd: regulator-vsnlcd {
+	bvdd_lcd: regulator-bvddlcd {
 		compatible = "regulator-fixed";
 		regulator-name = "avdd-lcd-vsn";
 		regulator-min-microvolt = <5500000>;
@@ -1504,8 +1542,8 @@
 	vdd_lcd: regulator-vddlcd {
 		compatible = "regulator-fixed";
 		regulator-name = "vdd-lcd";
-		regulator-min-microvolt = <1800000>;
-		regulator-max-microvolt = <1800000>;
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
 		enable-active-high;
 		gpio = <&palmas_gpio 4 GPIO_ACTIVE_HIGH>;
 		vin-supply = <&palmas_smps8>;
