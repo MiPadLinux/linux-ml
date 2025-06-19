@@ -1480,7 +1480,7 @@
 		vin-supply = <&palmas_smps10_out2>;
 	};
 
-	avdd_lcd: regulator-avddlcd {
+	vsp_5v5_lcd: regulator-vsplcd {
 		compatible = "regulator-fixed";
 		regulator-name = "avdd-lcd-vsp";
 		regulator-min-microvolt = <5500000>;
@@ -1491,7 +1491,7 @@
 		enable-active-high;
 	};
 
-	bvdd_lcd: regulator-bvddlcd {
+	vsn_5v5_lcd: regulator-vsnlcd {
 		compatible = "regulator-fixed";
 		regulator-name = "avdd-lcd-vsn";
 		regulator-min-microvolt = <5500000>;
