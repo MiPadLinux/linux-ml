@@ -272,7 +272,7 @@
 						regulator-max-microvolt = <1050000>;
 					};
 
-					palmas_ldo2: ldo2 {
+					avdd_lcd: ldo2 {
 						regulator-name = "vdd-lcd-io";
 						regulator-min-microvolt = <1800000>;
 						regulator-max-microvolt = <1800000>;
@@ -1539,9 +1539,9 @@
 		enable-active-high;
 	};
 
-	vdd_lcd: regulator-vddlcd {
+	vdd_lcd_io: regulator-vddlcdio {
 		compatible = "regulator-fixed";
-		regulator-name = "vdd-lcd";
+		regulator-name = "vdd-lcd-io";
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
 		enable-active-high;
