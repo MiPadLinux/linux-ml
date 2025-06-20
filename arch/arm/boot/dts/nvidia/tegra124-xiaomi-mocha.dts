@@ -296,6 +296,7 @@
 						regulator-name = "avdd-dsi-csi";
 						regulator-min-microvolt = <1200000>;
 						regulator-max-microvolt = <1200000>;
+						regulator-boot-on;
 					};
 
 					ldo6 {
@@ -1535,6 +1536,7 @@
 		regulator-min-microvolt = <5500000>;
 		regulator-max-microvolt = <5500000>;
 		regulator-boot-on;
+		regulator-always-on;
 		gpio = <&gpio TEGRA_GPIO(S, 2) GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 	};
@@ -1545,6 +1547,8 @@
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
 		enable-active-high;
+		regulator-boot-on;
+		regulator-always-on;
 		gpio = <&palmas_gpio 4 GPIO_ACTIVE_HIGH>;
 		vin-supply = <&palmas_smps8>;
 	};
