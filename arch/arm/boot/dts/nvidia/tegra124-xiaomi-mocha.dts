@@ -470,7 +470,7 @@
 			compatible = "ti,bq24192";
 			reg = <0x6b>;
 			interrupt-parent = <&gpio>;
-			interrupts = <72 IRQ_TYPE_LEVEL_HIGH>;
+			interrupts = <TEGRA_GPIO(J,0) IRQ_TYPE_EDGE_FALLING>;
 			monitored-battery = <&bat>;
 			omit-battery-class;
 	
