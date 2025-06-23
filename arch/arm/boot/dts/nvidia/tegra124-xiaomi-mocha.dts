@@ -432,7 +432,7 @@
 			compatible = "national,lp5521";
             #address-cells = <1>;
             #size-cells = <0>;
-            reg = <0x34>;
+            reg = <0x32>;
 			clock-mode = /bits/ 8 <1>;
 			led@0 {
 				led-cur = /bits/ 8 <50>;
