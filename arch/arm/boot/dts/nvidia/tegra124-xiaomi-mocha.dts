@@ -1660,10 +1660,9 @@
 		pads {
 			usb2 {
 				status = "okay";
-
 				lanes {
 					usb2-0 {
-						nvidia,function = "xusb";
+						nvidia,function = "snps";
 						status = "okay";
 					};
 				};
@@ -1674,7 +1673,7 @@
 			/* Micro A/B */
 			usb2-0 {
 				status = "okay";
-				mode = "host";
+				mode = "peripheral";
 			};
 		};
 	};
