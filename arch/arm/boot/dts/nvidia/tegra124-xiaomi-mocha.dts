@@ -71,7 +71,7 @@
 
 	host1x@50000000 {
 		dsia: dsi@54300000 {
-			status = "okay";
+			status = "disabled";
 
 			avdd-dsi-csi-supply = <&avdd_dsi_csi>;
 			nvidia,ganged-mode = <&dsib>;
@@ -95,7 +95,7 @@
 		};
 
 		dsib: dsi@54400000 {
-			status = "okay";
+			status = "disabled";
 
 			avdd-dsi-csi-supply = <&avdd_dsi_csi>;
 
