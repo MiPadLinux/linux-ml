@@ -417,6 +417,31 @@
 				rom-val = /bits/ 8 <0x0f>;
 			};
 		};
+
+		lp5521: led-controller@32 {
+			compatible = "national,lp5521";
+            #address-cells = <1>;
+            #size-cells = <0>;
+            reg = <0x34>;
+			clock-mode = /bits/ 8 <1>;
+			led@0 {
+				led-cur = /bits/ 8 <50>;
+				max-cur = /bits/ 8 <100>;
+				reg = <0x0>;
+			};
+
+			led@1 {
+				led-cur = /bits/ 8 <50>;
+				max-cur = /bits/ 8 <100>;
+				reg = <0x1>;
+			};
+
+			led@2 {
+				led-cur = /bits/ 8 <50>;
+				max-cur = /bits/ 8 <100>;
+				reg = <0x2>;
+			};
+		}
 	};
 
 	i2c@7000c400 {
