@@ -428,6 +428,7 @@
 		};
 
 		lp5521: led-controller@32 {
+			status = "okay";
 			compatible = "national,lp5521";
             #address-cells = <1>;
             #size-cells = <0>;
