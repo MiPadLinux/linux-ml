@@ -428,11 +428,12 @@
 		};
 
 		lp5521: led-controller@32 {
+			#address-cells = <1>;
+            #size-cells = <0>;
 			status = "okay";
 			compatible = "national,lp5521";
-            #address-cells = <1>;
-            #size-cells = <0>;
             reg = <0x32>;
+			enable-gpios: <&gpio TEGRA_GPIO(G,7) GPIO_ACTIVE_HIGH>;
 			clock-mode = /bits/ 8 <1>;
 			led@0 {
 				led-cur = /bits/ 8 <50>;
@@ -694,7 +695,7 @@
 				nvidia,pins = "pg7";
 				nvidia,function = "rsvd1";
 				nvidia,enable-input = <TEGRA_PIN_DISABLE>;
-				nvidia,pull = <TEGRA_PIN_PULL_UP>;
+				nvidia,pull = <TEGRA_PIN_PULL_NONE>;
 				nvidia,tristate = <TEGRA_PIN_DISABLE>;
 			};
 
