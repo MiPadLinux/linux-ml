@@ -436,22 +436,22 @@
 			enable-gpios = <&gpio TEGRA_GPIO(G, 7) GPIO_ACTIVE_HIGH>;
 			clock-mode = /bits/ 8 <0>;
 			led@0 {
-				led-cur = /bits/ 8 <20>;
-				max-cur = /bits/ 8 <255>;
+				led-cur = /bits/ 8 <0x14>;
+				max-cur = /bits/ 8 <0xff>;
 				reg = <0>;
 				color = <LED_COLOR_ID_RED>;
 			};
 
 			led@1 {
-				led-cur = /bits/ 8 <20>;
-				max-cur = /bits/ 8 <255>;
+				led-cur = /bits/ 8 <0x14>;
+				max-cur = /bits/ 8 <0xff>;
 				reg = <1>;
 				color = <LED_COLOR_ID_GREEN>;
 			};
 
 			led@2 {
-				led-cur = /bits/ 8 <20>;
-				max-cur = /bits/ 8 <255>;
+				led-cur = /bits/ 8 <0x14>;
+				max-cur = /bits/ 8 <0xff>;
 				reg = <2>;
 				color = <LED_COLOR_ID_BLUE>;
 
