@@ -693,7 +693,7 @@
 
 			pg7 {
 				nvidia,pins = "pg7";
-				nvidia,function = "rsvd1";
+				nvidia,function = "rsvd2";
 				nvidia,enable-input = <TEGRA_PIN_DISABLE>;
 				nvidia,pull = <TEGRA_PIN_PULL_NONE>;
 				nvidia,tristate = <TEGRA_PIN_DISABLE>;
