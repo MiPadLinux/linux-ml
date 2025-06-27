@@ -439,19 +439,21 @@
 				led-cur = /bits/ 8 <0x14>;
 				max-cur = /bits/ 8 <0xff>;
 				reg = <0>;
+				label = "red";
 			};
 
 			led@1 {
 				led-cur = /bits/ 8 <0x14>;
 				max-cur = /bits/ 8 <0xff>;
 				reg = <1>;
+				label = "green";
 			};
 
 			led@2 {
 				led-cur = /bits/ 8 <0x14>;
 				max-cur = /bits/ 8 <0xff>;
 				reg = <2>;
-
+				label = "blue";
 			};
 		};
 	};
