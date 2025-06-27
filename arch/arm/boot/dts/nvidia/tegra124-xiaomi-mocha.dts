@@ -434,7 +434,7 @@
 			compatible = "national,lp5521";
             reg = <0x32>;
 			enable-gpios = <&gpio TEGRA_GPIO(G, 7) GPIO_ACTIVE_HIGH>;
-			clock-mode = /bits/ 8 <1>;
+			clock-mode = /bits/ 8 <0>;
 			led@0 {
 				led-cur = /bits/ 8 <50>;
 				max-cur = /bits/ 8 <100>;
