@@ -433,7 +433,7 @@
 			status = "okay";
 			compatible = "national,lp5521";
             reg = <0x32>;
-			enable-gpios = <&gpio TEGRA_GPIO(G,7) GPIO_ACTIVE_HIGH>;
+			enable-gpios = <&gpio TEGRA_GPIO(G, 7) GPIO_ACTIVE_HIGH>;
 			clock-mode = /bits/ 8 <1>;
 			led@0 {
 				led-cur = /bits/ 8 <50>;
@@ -1664,7 +1664,7 @@
 				status = "okay";
 				lanes {
 					usb2-0 {
-						nvidia,function = "snps";
+						nvidia,function = "xusb";
 						status = "okay";
 					};
 				};
