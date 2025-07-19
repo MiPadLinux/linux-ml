@@ -361,7 +361,7 @@
 
 	i2c@7000c000 {
 		status = "okay";
-		clock-frequency = <400000>;
+		clock-frequency = <100000>;
 		lp8556: backlight@2c {
 			compatible = "ti,lp8556";
 			reg = <0x2c>;
